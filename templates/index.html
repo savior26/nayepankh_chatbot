@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NayePankh Foundation AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="chat-wrapper">
+        <div class="chat-header">
+            <div class="brand-info">
+                <div class="avatar-icon"><i class="fas fa-feather-alt"></i></div>
+                <div>
+                    <h3>NayePankh Support Bot</h3>
+                    <p><span class="online-indicator"></span> Active Now</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-body" id="chatWindow">
+            <div class="message system-msg">
+                Welcome! 🙏 I am your NayePankh AI Guide. Ask me anything about our missions, volunteering opportunities, or how to claim 80G tax benefits on donations! Feel free to talk in English, हिंदी, or Hinglish.
+            </div>
+        </div>
+
+        <div class="workflow-pills">
+            <button onclick="sendPreset('Tell me about 80G tax exemption donations')">🎁 Tax-Saving Donations</button>
+            <button onclick="sendPreset('How can I join NayePankh as a youth volunteer?')">🙋 Join as Volunteer</button>
+            <button onclick="sendPreset('Tell me about your food distribution drives')">🐾 Stray Animal Care & Hunger</button>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+            <button id="sendBtn" onclick="submitMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

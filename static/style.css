@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-wrapper {
+    width: 420px;
+    height: 600px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header UI Elements */
+.chat-header {
+    background: linear-gradient(135deg, #1e3a8a, #0d9488);
+    color: #ffffff;
+    padding: 16px;
+}
+
+.brand-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.brand-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.brand-info p {
+    font-size: 12px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.online-indicator {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Messaging Canvas */
+.chat-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #f8fafc;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.system-msg {
+    background: #e2e8f0;
+    color: #334155;
+    align-self: center;
+    max-width: 95%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.user-msg {
+    background: #1e3a8a;
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.bot-msg {
+    background: #ffffff;
+    color: #1e293b;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+}
+
+.loading-dots {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* Quick Assist Pills Navigation */
+.workflow-pills {
+    padding: 8px 12px;
+    background: #f1f5f9;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top: 1px solid #e2e8f0;
+}
+
+.workflow-pills::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for clean UI look */
+}
+
+.workflow-pills button {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #475569;
+    transition: all 0.2s;
+}
+
+.workflow-pills button:hover {
+    border-color: #0d9488;
+    color: #0d9488;
+    background: #f0fdfa;
+}
+
+/* Base Form Input Deck */
+.chat-footer {
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 24px;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-footer input:focus {
+    border-color: #1e3a8a;
+}
+
+.chat-footer button {
+    width: 40px;
+    height: 40px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.chat-footer button:hover {
+    background: #0d9488;
+}
